@@ -1,0 +1,223 @@
+:root {
+  --wa-green: #25d366;
+  --wa-teal: #128c7e;
+  --wa-dark-bg: #111b21;
+  --wa-dark-card: #202c33;
+  --neon-green: #00ff9d;
+  --neon-glow: 0 0 10px rgba(0, 255, 157, 0.5);
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--wa-dark-bg);
+  color: #e9edef;
+  min-height: 100vh;
+}
+
+/* Overriding PrimeNG Card */
+.p-card {
+  background-color: var(--wa-dark-card) !important;
+  color: #e9edef !important;
+  border: 1px solid rgba(0, 255, 157, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.p-card .p-card-title {
+  color: var(--neon-green) !important;
+  text-shadow: 0 0 5px rgba(0, 255, 157, 0.3);
+}
+
+/* Buttons */
+.p-button {
+  background: var(--wa-green) !important;
+  border: none !important;
+  color: #111b21 !important;
+  font-weight: bold !important;
+  transition: all 0.3s ease !important;
+}
+
+.p-button:hover {
+  background: var(--neon-green) !important;
+  box-shadow: var(--neon-glow) !important;
+  transform: translateY(-1px);
+}
+
+.p-button-danger {
+  background: #ff3366 !important;
+  color: white !important;
+}
+
+.p-button-danger:hover {
+  background: #ff0044 !important;
+  box-shadow: 0 0 10px rgba(255, 51, 102, 0.5) !important;
+}
+
+/* Inputs */
+.p-inputtext {
+  background-color: #2a3942 !important;
+  border-color: #2a3942 !important;
+  color: #e9edef !important;
+}
+
+.p-inputtext:focus {
+  border-color: var(--wa-green) !important;
+  box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.2) !important;
+}
+
+/* Navbar/Menubar */
+.p-menubar {
+  background-color: #202c33 !important;
+  border: none !important;
+  border-bottom: 2px solid var(--wa-teal) !important;
+}
+
+.p-menubar .p-menuitem-link .p-menuitem-text {
+  color: #e9edef !important;
+}
+
+.p-menubar .p-menuitem-link:hover {
+  background-color: rgba(37, 211, 102, 0.1) !important;
+}
+
+.p-menubar .p-menuitem-link .p-menuitem-icon {
+  color: var(--wa-green) !important;
+}
+
+/* Data Tables */
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: #202c33 !important;
+  color: var(--wa-green) !important;
+  border-color: #2a3942 !important;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background-color: var(--wa-dark-bg) !important;
+  color: #e9edef !important;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: #2a3942 !important;
+}
+
+.p-dialog .p-dialog-header {
+  background-color: #202c33 !important;
+  color: var(--wa-green) !important;
+}
+
+.p-dialog .p-dialog-content {
+  background-color: var(--wa-dark-bg) !important;
+}
+
+/* Global Button Spacing */
+.p-button {
+  margin: 0.25rem; /* Add breathing room around all buttons by default */
+}
+
+/* Ensure no double margin when buttons are next to each other in a flex container */
+.p-d-flex > .p-button {
+  margin: 0 0.5rem 0 0;
+}
+.p-d-flex > .p-button:last-child {
+  margin-right: 0;
+}
+
+/* Specific fix for adjacent buttons if not in controlled layout */
+.p-button + .p-button {
+  margin-left: 0.5rem !important;
+}
+
+/* Data Tables Action Buttons */
+.p-datatable .p-button {
+  margin-right: 0.5rem !important;
+}
+.p-datatable .p-button:last-child {
+  margin-right: 0 !important;
+}
+
+/* PrimeFlex Utility Helpers (in case they are missing) */
+.p-mr-1 {
+  margin-right: 0.25rem !important;
+}
+.p-mr-2 {
+  margin-right: 0.5rem !important;
+}
+.p-mr-3 {
+  margin-right: 1rem !important;
+}
+.p-ml-1 {
+  margin-left: 0.25rem !important;
+}
+.p-ml-2 {
+  margin-left: 0.5rem !important;
+}
+.p-ml-3 {
+  margin-left: 1rem !important;
+}
+.p-mt-1 {
+  margin-top: 0.25rem !important;
+}
+.p-mt-2 {
+  margin-top: 0.5rem !important;
+}
+.p-mt-3 {
+  margin-top: 1rem !important;
+}
+.p-mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+.p-mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+.p-mb-3 {
+  margin-bottom: 1rem !important;
+}
+.p-p-1 {
+  padding: 0.25rem !important;
+}
+.p-p-2 {
+  padding: 0.5rem !important;
+}
+.p-p-3 {
+  padding: 1rem !important;
+}
+.p-p-4 {
+  padding: 1.5rem !important;
+}
+.p-p-6 {
+  padding: 3rem !important;
+}
+
+.p-d-flex {
+  display: flex !important;
+}
+.p-jc-between {
+  justify-content: space-between !important;
+}
+.p-jc-center {
+  justify-content: center !important;
+}
+.p-jc-end {
+  justify-content: flex-end !important;
+}
+.p-ai-center {
+  align-items: center !important;
+}
+.p-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+.p-col-12 {
+  flex: 0 0 100%;
+  padding: 0.5rem;
+}
+.p-md-4 {
+  flex: 0 0 33.3333%;
+  padding: 0.5rem;
+}
+.p-text-center {
+  text-align: center !important;
+}
